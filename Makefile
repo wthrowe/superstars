@@ -3,7 +3,7 @@ CXXFLAGS = -march=native -O0 -ggdb -pipe -Wall -Wextra
 LDFLAGS = -Wl,-O1 -Wl,--as-needed
 
 EXECS = HernquistProfile PotentialFromProfile
-LIBS = SuperstarCluster
+LIBS = LineStream SuperstarCluster
 
 EXECOBJS = $(EXECS:=.o)
 LIBOBJS = $(LIBS:=.o)
