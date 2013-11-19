@@ -39,6 +39,9 @@ public:
     return mPotentials;
   }
 
+  // PrepareStep() must be called first.
+  double Energy() const;
+
 private:
   const double mG;
 

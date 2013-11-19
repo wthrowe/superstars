@@ -53,3 +53,16 @@ void SuperstarCluster::PrepareStep() {
     }
   }
 }
+
+double SuperstarCluster::Energy() const {
+  assert(mPotentials.size() == mStars.size()); // not calculated
+
+  double energy = 0;
+  for(std::vector<Superstar>::size_type i = 0;i<mStars.size();i++) {
+    const Superstar& star = mStars[i];
+    energy += 0.5 * (star.Mass() * sqr(star.Velocity())
+		     + sqr(star.AngularMomentum()/star.Radius())/star.Mass()
+		     + star.Mass() * mPotentials[i]);
+  }
+  return energy;
+}
