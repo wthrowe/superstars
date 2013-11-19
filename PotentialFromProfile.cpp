@@ -26,8 +26,9 @@ int main(int argc, char **argv) {
 	return 1;
       }
 
-      // we're reading in a cumulative mass profile, but we need a shell mass
-      cluster.insert(Superstar(mass - totalMass, radius));
+      // We're reading in a cumulative mass profile, but we need a shell mass.
+      // We don't are about dynamics for this, so set velocities to zero.
+      cluster.insert(Superstar(mass - totalMass, 0, radius, 0));
       totalMass = mass;
     }
   }
