@@ -35,7 +35,8 @@ void SuperstarCluster::PrepareStep() {
   double enclosedMass = 0;
   for(std::vector<Superstar>::size_type i=0;i<nstars;i++) {
     mEnclosedMasses[i] = enclosedMass;
-    mForces[i] = - mG * enclosedMass / sqr(mStars[i].Radius());
+    mForces[i] =
+      - mG * (enclosedMass + 0.5*mStars[i].Mass()) / sqr(mStars[i].Radius());
 
     enclosedMass += mStars[i].Mass();
   }
