@@ -19,8 +19,10 @@ public:
   // calculate forces and potentials
   void PrepareStep();
 
-  // get the stars
+  // Get the stars.  Modifying the list invalidates any previous calls to
+  // PrepareStep().
   const std::vector<Superstar>& Superstars() const { return mStars; }
+  std::vector<Superstar>& Superstars() { return mStars; }
 
   // Get the force per unit mass on each superstar, in the same order
   // as the stars returned by Superstars().  PrepareStep() must be

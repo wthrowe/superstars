@@ -15,7 +15,10 @@ public:
   double AngularMomentum() const { return mAngularMomentum; }
 
   double Radius() const { return mRadius; }
+  double& Radius() { return mRadius; }
+
   double Velocity() const { return mVelocity; }
+  double& Velocity() { return mVelocity; }
 private:
   double mMass, mAngularMomentum;
   double mRadius, mVelocity;
