@@ -1,5 +1,7 @@
 #include "SuperstarCluster.hpp"
 
+#include "Utils.hpp"
+
 #include <algorithm>
 
 void SuperstarCluster::insert(const Superstar& star) {
@@ -11,8 +13,6 @@ void SuperstarCluster::insert(const Superstar& star) {
 }
 
 namespace {
-  template <class T> T sqr(const T& t) { return t*t; }
-
   // compare superstars based on radius
   class SuperstarComparator {
   public:
