@@ -3,7 +3,7 @@ CXXFLAGS = -march=native -O0 -ggdb -pipe -Wall -Wextra
 LDFLAGS = -Wl,-O1 -Wl,--as-needed
 
 EXECS = HernquistProfile Interpolate PotentialFromProfile
-LIBS = FreeInteractionStepper LineStream SuperstarCluster
+LIBS = FreeInteractionStepper LeapfrogStepper LineStream SuperstarCluster
 
 EXECOBJS = $(EXECS:=.o)
 LIBOBJS = $(LIBS:=.o)
