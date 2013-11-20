@@ -4,7 +4,7 @@ LDFLAGS = -Wl,-O1 -Wl,--as-needed
 
 EXECS = HernquistProfile Interpolate PotentialFromProfile
 LIBS = FreeInteractionStepper LeapfrogStepper LineStream ModifiedEulerStepper \
-       ReadCluster SuperstarCluster
+       ReadCluster SuperstarCluster WriteCluster
 
 EXECOBJS = $(EXECS:=.o)
 LIBOBJS = $(LIBS:=.o)
