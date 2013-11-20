@@ -2,7 +2,8 @@ CXX = g++
 CXXFLAGS = -march=native -O0 -ggdb -pipe -Wall -Wextra
 LDFLAGS = -Wl,-O1 -Wl,--as-needed
 
-EXECS = HernquistProfile Interpolate PotentialFromProfile TestEnergy
+EXECS = EvolveCluster HernquistProfile Interpolate PotentialFromProfile \
+        TestEnergy
 LIBS = FreeInteractionStepper LeapfrogStepper LineStream ModifiedEulerStepper \
        ReadCluster SuperstarCluster WriteCluster
 

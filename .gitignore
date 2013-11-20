@@ -2,6 +2,7 @@
 *.d
 *.o
 
+/EvolveCluster
 /HernquistProfile
 /Interpolate
 /PotentialFromProfile
