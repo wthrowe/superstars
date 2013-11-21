@@ -1,9 +1,9 @@
-CXX = g++
+CXX = g++ -std=c++11
 CXXFLAGS = -march=native -O0 -ggdb -pipe -Wall -Wextra
 LDFLAGS = -Wl,-O1 -Wl,--as-needed
 
 EXECS = EvolveCluster HernquistProfile Interpolate PotentialFromProfile \
-        TestEnergy
+        RandomCluster TestEnergy
 LIBS = FreeInteractionStepper LeapfrogStepper LineStream ModifiedEulerStepper \
        ReadCluster SuperstarCluster WriteCluster
 
